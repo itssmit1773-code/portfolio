@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A recovery path for stalled approvals | Smit Panchal</title>
+  <meta name="description" content="Turn deduplicated feedback into a product recommendation using a text taxonomy, a model audit, and RICE sensitivity.">
+  <meta property="og:title" content="A recovery path for stalled approvals | Smit Panchal">
+  <meta property="og:description" content="Turn deduplicated feedback into a product recommendation using a text taxonomy, a model audit, and RICE sensitivity.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Smit Panchal · AI Business Analyst">
+  <link rel="canonical" href="https://itssmit1773-code.github.io/portfolio/voice-of-customer.html">
+  <meta property="og:url" content="https://itssmit1773-code.github.io/portfolio/voice-of-customer.html">
+  <meta property="og:image" content="https://itssmit1773-code.github.io/portfolio/assets/feedback-dashboard.png">
+  <meta property="og:image:alt" content="Dashboard screenshot showing synthetic case study data">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#172B72">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/profile.js" defer></script>
+</head>
+<body data-page="voice-of-customer">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Smit Panchal</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="location">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+
+    <section class="case-top dark" data-accent="1">
+      <div class="wrap case-hero">
+        <a class="crumb" href="projects.html">← All projects</a>
+        <p class="eyebrow">Voice of customer · Synthetic case study</p>
+        <h1>A recovery path for stalled approvals</h1>
+        <p class="intro">Prototype a way for admins to reassign approvals when an approver loses access.</p>
+        <dl class="facts"><div><dt>Share of quarterly reports about approvals</dt><dd>25.3%</dd></div><div><dt>Identified users who reported approval issues</dt><dd>394</dd></div><div><dt>Base-case approval recovery score (RICE)</dt><dd>144.1</dd></div></dl>
+      </div>
+    </section>
+    <div class="wrap section case-grid" data-accent="1">
+      <aside class="side" aria-label="Case study navigation and evidence">
+        <nav class="case-nav" aria-label="In this case study">
+          <h2>On this page</h2>
+          <ul>
+            <li><a href="#decision">The decision</a></li>
+            <li><a href="#evidence">From messages to evidence</a></li>
+            <li><a href="#label-audit">How the labels were checked</a></li>
+            <li><a href="#prioritization">When the recommendation changes</a></li>
+            <li><a href="#limits">Limits of the evidence</a></li>
+            <li><a href="#dashboard">Dashboard preview</a></li>
+          </ul>
+        </nav>
+        <section class="evidence" aria-labelledby="evidence-files">
+          <h2 id="evidence-files">Evidence files</h2>
+          <ul>
+            <li><a href="assets/feedback-themes.csv" download>Quarterly feedback themes (CSV)</a></li>
+            <li><a href="assets/rice-sensitivity.csv" download>RICE sensitivity (CSV)</a></li>
+            <li><a href="assets/approval-recovery-prd.md" download>Approval recovery PRD (Markdown)</a></li>
+            <li><a href="https://github.com/itssmit1773-code/voice-of-customer">GitHub repository</a></li>
+          </ul>
+        </section>
+      </aside>
+      <article class="case-article">
+        <section id="decision">
+          <h2>The decision</h2>
+          <p>Relayboard’s workflow team can prototype one improvement. Approval handoffs led the decision quarter with 469 of 1,854 canonical reports. The proposal lets an authorized admin reassign a pending request when its approver loses access, while preserving the original request, policy and audit history.</p>
+        </section>
+        <section id="evidence">
+          <h2>From messages to evidence</h2>
+          <p>The six-month pipeline consolidates 423 duplicates from 3,933 source events and retains the original evidence trail. Report share counts canonical reports. The reach estimate uses distinct identified reporters and adjusts for assumed eligibility. The quarter contains 190 reports without a known user ID.</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Most reported themes in the decision quarter"><table><caption>Most reported themes in the decision quarter</caption><thead><tr><th scope="col">Theme</th><th scope="col">Reports</th><th scope="col">Share</th><th scope="col">Identified reporters</th></tr></thead><tbody><tr><th scope="row">Approval handoffs</th><td>469</td><td>25.3%</td><td>394</td></tr><tr><th scope="row">Notification overload</th><td>351</td><td>18.9%</td><td>292</td></tr><tr><th scope="row">Export issues</th><td>254</td><td>13.7%</td><td>224</td></tr></tbody></table></div>
+        </section>
+        <section id="label-audit">
+          <h2>How the labels were checked</h2>
+          <p>An English lexical taxonomy labels topic, sentiment and severity and flags uncertain or sensitive cases. On 24 hand-labeled examples it correctly classified 18 topics and routed two ambiguous examples to review. It abstained on four other topics. A Naive Bayes baseline was evaluated on the same small set. Possible permission exposure goes to incident review.</p>
+        </section>
+        <section id="prioritization">
+          <h2>When the recommendation changes</h2>
+          <p>RICE scores use estimates of reach, impact, confidence, and effort. Approval recovery leads the base scenario at 144.1 versus 35.0 for a notification digest. The stressed approval scenario falls to 19.9, below the digest’s base score. Validate eligibility with sampled cases, interviews and workflow events, then measure valid decisions within 24 hours in a pilot while monitoring authorization and audit integrity.</p>
+        </section>
+        <section id="limits" class="notice">
+          <h2>Limits of the evidence</h2>
+          <p>The feedback, labels and planning inputs are synthetic. The generator deliberately raises the approval share over time. The results show how the prioritization workflow behaves and cannot establish market prevalence or adoption.</p>
+        </section>
+        <section id="dashboard">
+          <h2>Dashboard preview</h2>
+          <figure class="screenshot">
+            <a class="dashboard-preview" href="assets/feedback-dashboard.png" data-preview>
+              <img src="assets/feedback-dashboard.png" width="1440" height="1060" alt="Relayboard feedback dashboard with report counts, theme shares, and monthly feedback trends." loading="lazy" decoding="async">
+              <span>Enlarge dashboard <span aria-hidden="true">↗</span></span>
+            </a>
+          </figure>
+        </section>
+      </article>
+    </div>
+    <nav class="wrap next-project" aria-label="Next case study">
+      <a href="support-automation.html"><span>Next case study</span><strong>Where to automate support</strong><span class="link-arrow" aria-hidden="true">→</span></a>
+    </nav>
+    <dialog class="preview-dialog" aria-labelledby="preview-title">
+      <div class="dialog-bar">
+        <h2 id="preview-title">Dashboard preview</h2>
+        <a class="full-image">Open image file</a>
+        <form method="dialog"><button type="submit" autofocus>Close <span aria-hidden="true">×</span></button></form>
+      </div>
+      <div class="dialog-image"></div>
+    </dialog>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-inner">
+      <p><strong>Smit Panchal</strong><span>Independent case studies using synthetic data</span></p>
+      <a href="https://www.linkedin.com/in/smitpanchal17">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>

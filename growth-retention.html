@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The teammate invite gap | Smit Panchal</title>
+  <meta name="description" content="Trace seven-day onboarding, compare later workspace retention, and size a proposed teammate invite experiment.">
+  <meta property="og:title" content="The teammate invite gap | Smit Panchal">
+  <meta property="og:description" content="Trace seven-day onboarding, compare later workspace retention, and size a proposed teammate invite experiment.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Smit Panchal · AI Business Analyst">
+  <link rel="canonical" href="https://itssmit1773-code.github.io/portfolio/growth-retention.html">
+  <meta property="og:url" content="https://itssmit1773-code.github.io/portfolio/growth-retention.html">
+  <meta property="og:image" content="https://itssmit1773-code.github.io/portfolio/assets/growth-dashboard.png">
+  <meta property="og:image:alt" content="Dashboard screenshot showing synthetic case study data">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#172B72">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/profile.js" defer></script>
+</head>
+<body data-page="growth-retention">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Smit Panchal</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="location">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+
+    <section class="case-top dark" data-accent="0">
+      <div class="wrap case-hero">
+        <a class="crumb" href="projects.html">← All projects</a>
+        <p class="eyebrow">Growth & retention · Synthetic case study</p>
+        <h1>The teammate invite gap</h1>
+        <p class="intro">Investigate the teammate invite step before changing the onboarding flow.</p>
+        <dl class="facts"><div><dt>Project creators who never reached invite</dt><dd>43.1%</dd></div><div><dt>Day-7 activation</dt><dd>31.6%</dd></div><div><dt>Proposed enrollment</dt><dd>19 weeks</dd></div></dl>
+      </div>
+    </section>
+    <div class="wrap section case-grid" data-accent="0">
+      <aside class="side" aria-label="Case study navigation and evidence">
+        <nav class="case-nav" aria-label="In this case study">
+          <h2>On this page</h2>
+          <ul>
+            <li><a href="#decision">The decision</a></li>
+            <li><a href="#evidence">How the evidence was built</a></li>
+            <li><a href="#retention">What the comparison shows</a></li>
+            <li><a href="#experiment">How to test the change</a></li>
+            <li><a href="#limits">Limits of the evidence</a></li>
+            <li><a href="#dashboard">Dashboard preview</a></li>
+          </ul>
+        </nav>
+        <section class="evidence" aria-labelledby="evidence-files">
+          <h2 id="evidence-files">Evidence files</h2>
+          <ul>
+            <li><a href="assets/onboarding-funnel.csv" download>Funnel counts (CSV)</a></li>
+            <li><a href="assets/retention-by-activation.csv" download>Retention comparison (CSV)</a></li>
+            <li><a href="assets/experiment-protocol.md" download>Experiment protocol (Markdown)</a></li>
+            <li><a href="https://github.com/itssmit1773-code/product-growth-retention">GitHub repository</a></li>
+          </ul>
+        </section>
+      </aside>
+      <article class="case-article">
+        <section id="decision">
+          <h2>The decision</h2>
+          <p>TandemDesk’s growth team has room to investigate one onboarding step. The ordered funnel puts the teammate invite first. Of 3,374 project creators, 1,455 did not reach the invite step within seven days. The event log records submitted invites. Interviews and delivery instrumentation would help explain where owners got stuck.</p>
+        </section>
+        <section id="evidence">
+          <h2>How the evidence was built</h2>
+          <p>Python and SQLite reconstruct workspace outcomes from 46,002 synthetic events across 4,532 signups. The funnel requires the steps to occur in order, and activation, retention and payment each use a cohort old enough to observe the full window.</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Ordered onboarding outcomes"><table><caption>Ordered onboarding outcomes</caption><thead><tr><th scope="col">Step</th><th scope="col">Reached</th><th scope="col">Share of eligible</th></tr></thead><tbody><tr><th scope="row">Workspace created</th><td>4,317</td><td>100.0%</td></tr><tr><th scope="row">Project created</th><td>3,374</td><td>78.2%</td></tr><tr><th scope="row">Teammate invited</th><td>1,919</td><td>44.5%</td></tr><tr><th scope="row">Collaborative action</th><td>1,365</td><td>31.6%</td></tr></tbody></table></div>
+        </section>
+        <section id="retention">
+          <h2>What the comparison shows</h2>
+          <p>Among workspaces with 35 days of follow-up, 501 of 1,095 early activators returned in week four (45.8%), compared with 417 of 2,349 other workspaces (17.8%). The simulation builds differences in intent and activity into those groups. The 28-point association cannot estimate the effect of adding an invite prompt.</p>
+        </section>
+        <section id="experiment">
+          <h2>How to test the change</h2>
+          <p>The proposed experiment randomizes workspaces after their first project if it was created within three days of signup. The historical activation baseline for that cohort is 38.7%. With 80% power and a two-sided 5% significance level, detecting a five-point lift takes 1,520 workspaces per arm, about 19 weeks of simulated enrollment and up to five more weeks of follow-up.</p>
+        </section>
+        <section id="limits" class="notice">
+          <h2>Limits of the evidence</h2>
+          <p>Workspace activity and payments are simulated. The experiment is a proposal. Confirm event tracking and eligible traffic before using the plan in a real product.</p>
+        </section>
+        <section id="dashboard">
+          <h2>Dashboard preview</h2>
+          <figure class="screenshot">
+            <a class="dashboard-preview" href="assets/growth-dashboard.png" data-preview>
+              <img src="assets/growth-dashboard.png" width="1440" height="840" alt="TandemDesk dashboard showing the seven-day onboarding funnel and the teammate invite drop-off." loading="lazy" decoding="async">
+              <span>Enlarge dashboard <span aria-hidden="true">↗</span></span>
+            </a>
+          </figure>
+        </section>
+      </article>
+    </div>
+    <nav class="wrap next-project" aria-label="Next case study">
+      <a href="voice-of-customer.html"><span>Next case study</span><strong>A recovery path for stalled approvals</strong><span class="link-arrow" aria-hidden="true">→</span></a>
+    </nav>
+    <dialog class="preview-dialog" aria-labelledby="preview-title">
+      <div class="dialog-bar">
+        <h2 id="preview-title">Dashboard preview</h2>
+        <a class="full-image">Open image file</a>
+        <form method="dialog"><button type="submit" autofocus>Close <span aria-hidden="true">×</span></button></form>
+      </div>
+      <div class="dialog-image"></div>
+    </dialog>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-inner">
+      <p><strong>Smit Panchal</strong><span>Independent case studies using synthetic data</span></p>
+      <a href="https://www.linkedin.com/in/smitpanchal17">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>
