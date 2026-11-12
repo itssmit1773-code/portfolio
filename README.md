@@ -1,5 +1,7 @@
 # Smit Panchal · AI Business Analyst Portfolio
 
+[Visit the live portfolio](https://itssmit1773-code.github.io/portfolio/)
+
 Three independent case studies using fictional products and synthetic data. Each case study includes the business decision, supporting evidence, assumptions, and limitations.
 
 | Case study | Project source |
